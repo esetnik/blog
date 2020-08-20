@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Ethan Setnik's Blog`,
-    author: `Ethan SEtnik`,
+    title: `ethansetnik.com`,
+    author: `Ethan Setnik`,
     description: `A blog`,
     siteUrl: `https://ethansetnik.com`,
     social: {
