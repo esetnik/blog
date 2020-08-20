@@ -57,7 +57,7 @@ const SearchedPosts = ({ results }) =>
               marginBottom: rhythm(1 / 4),
             }}
           >
-            <Link style={{ boxShadow: `none` }} to={`/blog${slug}`}>
+            <Link style={{ boxShadow: `none` }} to={slug}>
               {title}
             </Link>
           </h3>
@@ -87,7 +87,7 @@ const AllPosts = ({ posts }) => (
               marginBottom: rhythm(1 / 4),
             }}
           >
-            <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
+            <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
               {title}
             </Link>
           </h3>
@@ -129,9 +129,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
           placeholder="Search all posts"
           value={query}
           onChange={e => {
-            navigate(
-              e.target.value ? `/blog/?search=${e.target.value}` : "/blog/"
-            )
+            navigate(e.target.value ? `/?search=${e.target.value}` : "/")
             setQuery(e.target.value)
           }}
         />
